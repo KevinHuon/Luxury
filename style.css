@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none; 
+}
+
+body {
+    background-color: rgb(236, 236, 236);
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(70, 88, 73);
+}
+
+
+body.no-scroll {
+    overflow: hidden;
+  }
+
+/* barre de navigation */
+
+nav {
+    transition: .2s;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+nav.backnav {
+    background-color: rgb(255, 242, 214);
+}
+/* menu */
+
+.burger.active svg {
+    fill: rgb(255, 242, 214);
+}
+.burger.active p {
+    color: rgb(255, 242, 214);
+}
+
+.burger {
+    animation: translateX .5s linear;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    margin-left: 5vh;
+    z-index: 99;
+}
+
+.burger svg{
+    margin: 5px;
+    fill: rgb(143, 180, 145);
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+
+.burger p {
+    cursor: pointer;
+    color: rgb(143, 180, 145);
+    font-size: 15px;
+}
+
+/* bouton */
+
+.button_nav {
+    transition: .3s;
+    opacity: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+.menu {
+    box-shadow: 0px 0px 10px 0px rgb(250, 230, 188);
+    border-top: 2px solid  rgba(250, 230, 188, 0.514);
+    gap: 5vh;
+    top: 15%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    z-index: 99;
+    width: 100vh;
+    height: 84vh;
+    background-color: rgb(58, 80, 56);
+    border-bottom-right-radius: 3vh ;
+}
+
+.menu h1 {
+    font-size: 50px;
+    color: rgb(255, 242, 214);
+    margin-bottom: -8vh;
+}
+
+.menu a {
+    max-width: max-content;
+    font-size: 2vh;
+    color: rgb(255, 242, 214);
+    transition: .3s;
+}
+.menu a:hover {
+    color: rgb(248, 220, 159);
+    font-size: 2.1vh;
+
+}
+
+
+.menu h1,a {
+    position: relative;
+    bottom: 5%;
+    margin-left: 10vh;
+    text-decoration: none;
+    
+}
+
+
+.input-search {
+    margin: 5vh;
+    margin-left: 10vh;
+    display: flex;
+    width: 90vh;
+}
+.input-search span {
+    display: flex;
+    align-items: center;
+    width: 90vh;
+}
+
+.input-search svg {
+    position: absolute;
+    width: 4vh;
+    padding: .5vh;
+    height:2vh;
+    fill: rgb(231, 52, 52);
+    background-color: rgb(233, 207, 151);
+    border-radius: 10px 0px 0px 10px;
+    transition: .2s;
+    border-left: 3px solid rgb(233, 207, 151);
+    cursor: pointer;
+}
+.input-search svg:hover{
+    background-color: rgb(218, 192, 133);
+}
+
+
+.input-search input {
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+    padding-left: 5.5vh;
+    height: 3vh;
+    width: 30vh;
+    border-radius: 10px;
+    border: 3px solid rgb(233, 207, 151);
+    transition: .3s;
+    color: rgb(45, 61, 46);
+}
+.input-search input:hover {
+    background-color: rgb(248, 248, 248);
+}
+
+
+
+.button_nav.active {
+    z-index: 90;
+    opacity: 1;
+}
+
+.wall {
+    position: absolute;
+    background-color: rgb(250, 230, 188);
+    height: 40vh;
+    width: 1px;
+    z-index: 120;
+    top: 45%;
+    left: 35vh;
+    border-radius: 100%;
+}
+
+ul {
+    display: flex;
+    position: absolute;
+    left: 40%;
+    list-style: none;
+}
+ul li a p{
+    color: rgb(250, 215, 170);
+    font-size: 2vh;
+}
+
+
+
+.logo {
+    animation: opacite 1s linear;
+    width: 100%;
+    height: 15vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.logo img {
+    margin-top: 1vh;
+    position: relative;
+    width: 18vh;
+    height: 10vh;
+    filter: drop-shadow(0px 0px 4px rgba(250, 238, 181, 0.527));
+}
+
+.logo h1 {
+    color: rgb(33, 88, 30);
+    margin-top: -2vh;
+    font-size: 40px;
+    font-family: "Dancing Script", cursive;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+
+
+
+header {
+    cursor: default;
+    display: flex;
+    top: 0;
+    background:url(https://media.admagazine.fr/photos/6374e7144d398aaad26d293c/16:9/w_2560%2Cc_limit/DIOR%2520x%2520HARRODS_2022_Facade%2520%25C2%25A9%2520Adrien%2520Dirand7.jpg);
+    background-size: 50%;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Remplit sans distorsion */
+    filter: brightness(90%);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.position_video {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding-top: 20vh;
+    padding-left: 10vh;
+    transition: .3s;
+}
+
+header video {
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.589); /* Ombre pour donner de la profondeur */
+    filter: blur(.1vh) grayscale(90%);
+
+    width: 90%;
+    height: 70vh;
+    object-fit: cover; /* Remplit sans distorsion */
+    border-radius: 10px; /* Coins arrondis */    
+    transition: all 0.3s ease-in-out;
+    animation:scale1 .6s linear;
+}
+
+header video:hover {
+    filter: blur(0vh) grayscale(0%) contrast(110%);
+    margin-top: -4vh;
+    height: 80vh;
+
+}
+
+
+
+.text-luxury {
+    
+    padding-left: 5vh;
+    width: 100vh;
+    height: 100vh;
+    line-height: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background: rgb(64, 77, 61);
+    color: rgb(253, 231, 183);
+    box-shadow: 0px 0px 20px 15px rgb(253, 231, 183);
+
+    z-index: 0;
+
+}
+.text-luxury h1 {
+    animation:scale1 .3s linear;
+    padding-bottom: 2vh;
+    font-family: "Dancing Script", cursive;
+    font-size: 10vh;
+    margin-bottom: 15vh;
+}
+.text-luxury p{
+    padding-right: 5vh;
+    font-size: 2vh;
+    animation:opacite 1s linear;
+}
+.text-luxury p1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 4vh;
+    padding-bottom: 10px;
+    animation:opacite 1s linear;
+}
+
+
+@keyframes scale1 {
+    from {
+        transform: scale(0.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes opacite {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes translateX {
+    from {
+        opacity: 0.1;
+        transform: translateX(-20vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0vh);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 242, 214, 0.88);
+    }
+
+    .menu h1,a {
+        position: relative;
+        bottom: 5%;
+        margin-left: 5vh;
+        text-decoration: none;
+        
+    }
+    
+    
+    .input-search {
+        margin: 5vh;
+        margin-left: 5vh;
+        display: flex;
+        width: 90vh;
+    }
+    .wall {
+        display: none;
+    }
+    .button_nav ul {
+        display: none;
+    }
+
+    .position_video {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        padding-top: 20vh;
+        padding-left: 0vh;
+        transition: .3s;
+        
+    }
+    
+    header video {
+        
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.589); /* Ombre pour donner de la profondeur */
+        filter: blur(0vh) grayscale(0%) contrast(110%);
+        border-radius: 0px;
+        width: 100%;
+        height: 90vh;
+        object-fit: cover; /* Remplit sans distorsion */
+        transition: all 0.3s ease-in-out;
+    
+    }
+    header video:hover {
+        margin-top: 0vh;
+        height: 90vh;
+    }
+    
+}
