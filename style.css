@@ -464,6 +464,13 @@ header video:hover {
         margin-top: -20vh;
     }
 
+    header {
+        cursor: default;
+        display: flex;
+        top: 0;
+        background:none;
+    }
+
     .associer {
         display: none;
     }
@@ -471,7 +478,7 @@ header video:hover {
     .text-luxury {
         padding: 2vh;
         margin-top: 25vh;
-        width: 100%;
+        width: 90%;
         height: 50vh;
         background: rgba(253, 253, 253, 0.219);
         box-shadow: none;
